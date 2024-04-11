@@ -1,3 +1,3 @@
 source env/Bin/activate
-cd portafolio/portafolio
+cd hernandezpalo/hernandezpalo
 run reflex
