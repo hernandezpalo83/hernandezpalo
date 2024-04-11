@@ -1,5 +1,5 @@
 cd ..
-cd .env
+cd .venv
 cd bin
 source activate
 cd ..
