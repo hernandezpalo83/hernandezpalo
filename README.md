@@ -44,7 +44,7 @@ Acceder a [http://localhost:3000](http://localhost:3000) (frontend) y a [http://
 
 ## Despliegue
 
-<! -- ![Flujo moure.dev](../Images/flow.png)-->
+<! -- ![Flujo moure.dev](../Images/flow.png) -->
 
 ### Frontend
 
