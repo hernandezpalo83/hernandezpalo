@@ -29,5 +29,5 @@ async def dame_certificado() -> list[Curso]:
 async def actualiza_cache() -> str:
     return SUPABASE_API.tarea_actualizar_cache()
 
-async def dame_proyecto() -> str:
+async def dame_proyecto() -> list[Proyecto]:
     return SUPABASE_API.get_proyecto()
