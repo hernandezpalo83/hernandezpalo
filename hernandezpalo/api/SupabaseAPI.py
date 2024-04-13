@@ -181,7 +181,7 @@ class SupabaseAPI:
         if len(response.data) > 0:
             for featured_item in response.data:
                 featured_data.append(
-                    Tarea(
+                    Proyecto(
                         id=featured_item["id"], 
                         titulo=featured_item["titulo"],
                         imagen=featured_item["imagen"],
