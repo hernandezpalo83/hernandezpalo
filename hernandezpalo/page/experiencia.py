@@ -59,8 +59,11 @@ def cursos()-> rx.Component:
                         on_mount=StateExperiencias.get_certificado,
                         spacing="20px",
                         columns=[1, 1, 1, 2, 3, 3],
-                    )
+                    ), 
+                    width="100%",
+                    align_items="center",
                 ),
+                
                 rx.heading("Cursos"),
                 rx.box(
                     rx.chakra.responsive_grid(
@@ -68,7 +71,9 @@ def cursos()-> rx.Component:
                         on_mount=StateExperiencias.get_curso,
                         spacing="20px",
                         columns=[1, 1, 1, 2, 3, 3],
-                    )
+                    ), 
+                    width="100%",
+                    align_items="center",
             ),
             width="100%",
             align_items="center"

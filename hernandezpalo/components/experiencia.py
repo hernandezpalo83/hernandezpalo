@@ -59,6 +59,7 @@ def pinta_curso(lista:list[Curso]) -> rx.Component:
                             rx.chakra.stat_label(lista.titulo),
                             rx.chakra.stat_help_text(f"Realización: " + lista.fecha),
                         ),
+                    width="100%",                        
                     ),
                     href=lista.url,
                     is_external=True
@@ -77,7 +78,8 @@ def pinta_certificado(lista:list[Curso]) -> rx.Component:
                 rx.chakra.stat(
                     rx.chakra.stat_label(lista.titulo,  hyphens= "auto"),
                     rx.chakra.stat_help_text(f"Expedición: " + lista.fecha),
-                )
+                ),
+            width="100%",            
             ),
             href=lista.url,
             is_external=True

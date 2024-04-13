@@ -16,7 +16,11 @@ def footer() -> rx.Component:
                     rx.text(
                         "BUILDING SOFTWARE WITH ♥ FROM EXTREMADURA TO THE WORLD.",
                     ),
-                width="100%",
+                    width="100%",
+                    align_items = "center",
                 ),
-                align_content="center"
+                align_content="center",
+                width="100%",
+                align_items = "center",               
+
             )
