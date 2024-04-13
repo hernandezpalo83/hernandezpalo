@@ -9,7 +9,7 @@ import hernandezpalo.page.proyectos as proyectos
 import hernandezpalo.page.contacto as contacto
 
 
-from hernandezpalo.api.api import dame_habilidad, dame_tarea, dame_certificado, dame_experiencia, dame_curso, actualiza_cache
+from hernandezpalo.api.api import dame_habilidad, dame_tarea, dame_certificado, dame_experiencia, dame_curso, actualiza_cache, dame_proyecto
 app = rx.App(
     theme = rx.theme( 
         appearance="dark",
@@ -41,6 +41,7 @@ app.api.add_api_route("/habilidad", dame_habilidad)
 app.api.add_api_route("/experiencia", dame_experiencia)
 app.api.add_api_route("/curso", dame_curso)
 app.api.add_api_route("/certificado", dame_certificado)
+app.api.add_api_route("/proyecto", dame_proyecto)
 
 app.api.add_api_route("/update_cache", actualiza_cache)
 

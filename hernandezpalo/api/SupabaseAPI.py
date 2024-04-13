@@ -8,6 +8,7 @@ from supabase import create_client
 from hernandezpalo.models.Tarea import Tarea
 from hernandezpalo.models.Habilidad import Habilidad
 from hernandezpalo.models.Experiencia import Experiencia, Curso, Tecnologia
+from hernandezpalo.models.Proyecto import Proyecto
 
 class SupabaseAPI:
     
@@ -36,7 +37,8 @@ class SupabaseAPI:
             data = self.supabase.table("curso").select("*").eq('certificado', 'False').execute()
         elif tabla == "certificado":
             data = self.supabase.table("curso").select("*").eq('certificado', 'True').execute()
-            
+        elif tabla == "proyecto":
+            data = self.supabase.table("proyecto").select("*").execute()            
 
         if data:
             self.cache[tabla] = data    
@@ -167,7 +169,32 @@ class SupabaseAPI:
                     )
                 )
         return featured_data
+
+    def get_proyecto(self) -> list[Proyecto]:
+
+        featured_data = []
+
+        response = self.get_data_from_cache("proyecto")
+        if response is None:
+            response = self.update_cache("proyecto")
+
+        if len(response.data) > 0:
+            for featured_item in response.data:
+                featured_data.append(
+                    Tarea(
+                        id=featured_item["id"], 
+                        titulo=featured_item["tituto"],
+                        imagen=featured_item["imagen"],
+                        url=featured_item["url"], 
+                        descripcion=featured_item["descripcion"], 
+                        clasificacion1=featured_item["clasificacion1"], 
+                        clasificacion2=featured_item["clasificacion2"]
+                    )
+                )
+
+        return featured_data
     
+
     def tarea_actualizar_cache(self):
         for tabla in self.tablas:
             self.update_cache(tabla)

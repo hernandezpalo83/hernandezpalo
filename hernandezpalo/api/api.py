@@ -4,6 +4,7 @@ from .SupabaseAPI import SupabaseAPI
 from  hernandezpalo.models.Tarea import Tarea
 from  hernandezpalo.models.Habilidad import Habilidad
 from hernandezpalo.models.Experiencia import Experiencia, Curso, Tecnologia
+from hernandezpalo.models.Proyecto import Proyecto
 
 SUPABASE_API = SupabaseAPI()
 
@@ -27,3 +28,6 @@ async def dame_certificado() -> list[Curso]:
 
 async def actualiza_cache() -> str:
     return SUPABASE_API.tarea_actualizar_cache()
+
+async def dame_proyecto() -> str:
+    return SUPABASE_API.get_proyecto()
