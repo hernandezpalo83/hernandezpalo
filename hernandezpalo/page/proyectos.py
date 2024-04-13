@@ -28,7 +28,6 @@ def proyectos_page()-> rx.Component:
         navbar(ROUTE),
         rx.center ( 
             rx.vstack(
-                rx.heading("PROYECTOS"),
                 proyecto(),
                 footer(),
             spacing=Spacing.DEFAULT.value,
@@ -41,6 +40,8 @@ def proyectos_page()-> rx.Component:
     
 def proyecto()-> rx.Component:
     return rx.center(
+            rx.vstack(
+                rx.heading("Proyectos"),
                 rx.chakra.responsive_grid(
                     rx.foreach(StateProyecto.list_proyecto, pintar_proyecto),
                     on_mount=StateProyecto.get_proyecto,
@@ -50,6 +51,10 @@ def proyecto()-> rx.Component:
                     width="100%",
                     margin = EMSize.BIG.value,
                 ),
+                width="100%",
+                align_items = "center",
+                margin = EMSize.BIG.value,
+            ),
             )
 
 def pintar_proyecto(lista:list[Proyecto]) -> rx.Component:
@@ -57,13 +62,10 @@ def pintar_proyecto(lista:list[Proyecto]) -> rx.Component:
     return rx.card(
         rx.link(
             rx.vstack(
+                rx.heading(lista.titulo),
                 rx.image(src=lista.imagen),
-                rx.box(
-                    rx.heading(lista.titulo),
-                    rx.text(
-                        lista.descripcion
-                    ),
-                ),
+                rx.text(lista.descripcion),
+                rx.badge(lista.clasificacion1, variant="surface"),
                 spacing="2",
             ),
             href=lista.url,
