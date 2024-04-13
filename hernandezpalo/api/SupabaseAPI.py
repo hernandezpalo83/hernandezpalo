@@ -183,7 +183,7 @@ class SupabaseAPI:
                 featured_data.append(
                     Tarea(
                         id=featured_item["id"], 
-                        titulo=featured_item["tituto"],
+                        titulo=featured_item["titulo"],
                         imagen=featured_item["imagen"],
                         url=featured_item["url"], 
                         descripcion=featured_item["descripcion"], 
