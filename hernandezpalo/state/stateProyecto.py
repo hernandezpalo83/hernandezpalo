@@ -6,7 +6,7 @@ class StateProyecto(rx.State):
 
     list_proyecto: list[Proyecto] 
     
-    async def get_curso(self):
+    async def get_proyecto(self):
         self.list_proyecto = await dame_proyecto()
 
     

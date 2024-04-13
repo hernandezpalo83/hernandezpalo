@@ -3,9 +3,13 @@ import hernandezpalo.utils as utils
 
 from hernandezpalo.routes import Route
 from hernandezpalo.styles.styles import Spacing
+from hernandezpalo.styles.styles import EMSize
 
 from  hernandezpalo.components.navbar import navbar
 from hernandezpalo.components.footer import footer
+
+from hernandezpalo.state.stateProyecto import StateProyecto
+from hernandezpalo.models.Proyecto import Proyecto
 
 ROUTE = Route.PROYECTOS
 
@@ -24,8 +28,9 @@ def proyectos_page()-> rx.Component:
         navbar(ROUTE),
         rx.center ( 
             rx.vstack(
-                rx.text("PROYECTOS"),
-                #footer(),
+                rx.heading("PROYECTOS"),
+                proyecto(),
+                footer(),
             spacing=Spacing.DEFAULT.value,
             width="100%"
             )
@@ -33,22 +38,37 @@ def proyectos_page()-> rx.Component:
     )
 
 
-def pintar_proyecto() -> rx.Component:
-    return rx.card(
-            rx.inset(
-                rx.image(
-                    src="/reflex_banner.png",
+    
+def proyecto()-> rx.Component:
+    return rx.center(
+                rx.chakra.responsive_grid(
+                    rx.foreach(StateProyecto.list_proyecto, pintar_proyecto),
+                    on_mount=StateProyecto.get_proyecto,
+                    margin_top = EMSize.DEFAULT.value,    
+                    spacing="30px",
+                    columns=[1, 3, 4, 4, 4, 5],
                     width="100%",
-                    height="auto",
+                    margin = EMSize.BIG.value,
                 ),
-                side="top",
-                pb="current",
-            ),
-            rx.text(
-                "Reflex is a web framework that allows developers to build their app in pure Python."
-            ),
-            width="25vw",
-        )
+            )
 
-def proyecto() -> rx.Component:
-    pass
+def pintar_proyecto(lista:list[Proyecto]) -> rx.Component:
+    
+    return rx.card(
+        rx.link(
+            rx.vstack(
+                rx.image(src=lista.imagen),
+                rx.box(
+                    rx.heading(lista.titulo),
+                    rx.text(
+                        lista.descripcion
+                    ),
+                ),
+                spacing="2",
+            ),
+            href=lista.url,
+            is_external=True
+        ),
+        as_child=True,
+    )
+
