@@ -3,7 +3,8 @@ cd .venv
 cd bin
 source activate
 cd ..
-cd ..
+cd ..y
+
 cd hernandezpalo
 pip install --upgrade pip
 pip install -r requirements.txt
