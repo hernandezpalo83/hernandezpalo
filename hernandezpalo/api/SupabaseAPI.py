@@ -24,7 +24,7 @@ class SupabaseAPI:
             self.supabase = create_client(self.SUPABASE_URL, self.SUPABASE_KEY)
 
     def get_data_from_cache(self, tabla:str):
-        return self.cache.get(tabla)
+        return self.cache.get(tabla) 
 
     def update_cache(self, tabla:str):
         if tabla == "tarea":
