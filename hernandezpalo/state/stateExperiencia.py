@@ -16,5 +16,5 @@ class StateExperiencias(rx.State):
 
     async def get_experiencia(self):
         self.list_experiencia = await dame_experiencia()
-
+        self.list_experiencia = sorted(self.list_experiencia, key=lambda x: x.order, reverse=True)
 

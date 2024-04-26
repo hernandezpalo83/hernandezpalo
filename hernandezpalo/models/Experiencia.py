@@ -9,7 +9,8 @@ class Experiencia(rx.Base):
     titulo: str
     descripcion: str
     tecnologia: List[str]
-
+    order: int
+    
 class Curso(rx.Base):
     id: int
     titulo: str
