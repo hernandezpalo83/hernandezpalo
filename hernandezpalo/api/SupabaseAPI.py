@@ -38,7 +38,7 @@ class SupabaseAPI:
         elif tabla == "certificado":
             data = self.supabase.table("curso").select("*").eq('certificado', 'True').execute()
         elif tabla == "proyecto":
-            data = self.supabase.table("proyecto").select("*")..order('order').execute()            
+            data = self.supabase.table("proyecto").select("*").order('order').desc().execute()            
 
         if data:
             self.cache[tabla] = data    
