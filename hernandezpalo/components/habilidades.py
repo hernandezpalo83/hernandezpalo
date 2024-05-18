@@ -15,12 +15,14 @@ def habilidades() -> rx.Component:
                     spacing="30px",
                     columns=[1, 2, 4, 4, 7, 9],
                     width="100%",
+                    
                 ),
                 align_items = "center",
                 width="80%",
                 style=styles.featured_container_style,        
                 margin = EMSize.BIG.value,  
                 padding='5%',
+                align_self = "center",
             )
 
 def pintar_habilidad(Habilidad) -> rx.Component:
