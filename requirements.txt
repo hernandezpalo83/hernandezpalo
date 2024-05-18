@@ -1,4 +1,4 @@
-reflex==0.4.9
+reflex==0.5.0
 pip==24.0
 python-dotenv==1.0.1
 supabase==2.4.0
