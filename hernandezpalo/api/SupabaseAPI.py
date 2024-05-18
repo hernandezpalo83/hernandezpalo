@@ -19,7 +19,7 @@ class SupabaseAPI:
     tablas = ['tarea', 'habilidad', 'experiencia', 'curso', 'certificado']
 
     def __init__(self) -> None:
-        self.cache = TTLCache(maxsize=100, ttl=86400)  # Cache con una expiración de 1 dia
+        self.cache = TTLCache(maxsize=1000, ttl=31536000)  # Cache con una expiración de 1 dia
         if self.SUPABASE_URL != None and self.SUPABASE_KEY != None:
             self.supabase = create_client(self.SUPABASE_URL, self.SUPABASE_KEY)
 
