@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: http://hernandezpalo.vercel.app
-
-# Sitemaps
-Sitemap: http://hernandezpalo.vercel.app/sitemap.xml
