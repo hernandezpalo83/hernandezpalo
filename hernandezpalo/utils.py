@@ -12,8 +12,8 @@ meta = [
 ]
 
 # Index
-title_index = "Portafolio | by HernandezPalo"
-description_index = "Portafolio personal de HernandezPalo."
+title_index = "Portafolio de Javier Hernandez Martin, aqui podras descrubrir un poco mas sobre mi y sobre el desarrollo de aplicaciones | by HernandezPalo"
+description_index = "Portafolio personal de HernandezPalo. En esta pagina me podras conocer un poco mejor, mis gustos, intereses, lo que estoy aprendiendo o el proyecto en el que estoy inmerso."
 preview_index = "project/Portafolio.jpg"
 
 meta_index = [
@@ -24,8 +24,8 @@ meta_index = [
 meta_index.extend(meta)
 
 # Experiencia
-title_experiencia = "Experiencia Laboral de Javier Hernandez | by HernandezPalo"
-description_experiencia = "Muestra la experiencia laboral, cursos y certificados realizados por Javier Hernandez."
+title_experiencia = "Experiencia Laboral de Javier Hernandez Martin | by HernandezPalo"
+description_experiencia = "Muestra la experiencia laboral, cursos y certificados, al final para conocer mas lo que hecho, aunque lo importante es que hare, realizados por Javier Hernandez."
 preview_experiencia = "project/Portafolio.jpg"
 
 meta_experiencia = [
@@ -36,8 +36,8 @@ meta_experiencia = [
 meta_experiencia.extend(meta)
 
 # Proyectos
-title_projects = "Proyectos de Programación | by HernandezPalo"
-description_projects = "Aplicaciones personales desarrolladas para practicar los conocimiento."
+title_projects = "Proyectos de Programación realizados anteriormente | by HernandezPalo"
+description_projects = "Aqui muestro una lista (que no todas) de aplicaciones personales desarrolladas para aprender, practicar y aplicar los conocimiento adquiridos. Ya se sabe, hacer y deshacer todo es aprender."
 preview_projects = "project/Portafolio.jpg"
 
 meta_projects = [
@@ -48,8 +48,8 @@ meta_projects = [
 meta_projects.extend(meta)
 
 # sobremi
-title_sobremi = "Sobre mi | by HernandezPalo"
-description_sobremi = "Informacion sobre mi, gustos, intereses..."
+title_sobremi = "Sobre mi, un poco mas de informacion sobre Javier Hernandez Martin | by HernandezPalo"
+description_sobremi = "Quereis conocerme un poco mas, os puedo ayudar en algo, aqui os informo sobre como poneros en conctacto conmigo. A que esperais?."
 preview_sobremi = "project/Portafolio.jpg"
 
 meta_sobremi = [
@@ -60,8 +60,8 @@ meta_sobremi = [
 meta_sobremi.extend(meta)
 
 # contacto
-title_contacto = "Contacto | by HernandezPalo"
-description_contacto = "Formas de ponerse en contacto con Javier Hernandez"
+title_contacto = "Contacto, como podeis poneros en contacto conmigo | by HernandezPalo"
+description_contacto = "Quereis conocerme un poco mas, os puedo ayudar en algo, aqui os informo sobre como poneros en conctacto conmigo. A que esperais?."
 preview_contacto = "project/Portafolio.jpg"
 
 meta_contacto = [
