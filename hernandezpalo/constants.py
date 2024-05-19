@@ -24,7 +24,8 @@ CERT_LINKELID="https://www.linkedin.com/learning/certificates/aedef02f298d7f56c6
 
 #Proyectos
 PROY_RESTAURANTE= "https://restaurante.javihernandez.dev"
-PROY_BLOG="https://blog.javihernandez.dev"
+#PROY_BLOG="https://blog.javihernandez.dev"
+PROY_BLOG="https://hernandezpalo.pythonanywhere.com/"
 PROY_LOTERIA = "https://loteria-navidad.reflex.run"
 PROY_POKEDEX = "https://pokédex.javihernandez.dev"
 
