@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ruta al directorio del repositorio
-sudo rm hernandezpalo
+rm -rf hernandezpalo/
 
 # Actualizar el repositorio
 git clone https://github.com/hernandezpalo83/hernandezpalo.git
