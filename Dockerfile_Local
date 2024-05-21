@@ -19,9 +19,6 @@ RUN reflex init
 # Download all npm dependencies and compile frontend
 RUN reflex export --no-zip
 
-# Needed until Reflex properly passes SIGTERM on backend.
-STOPSIGNAL SIGKILL
-
 # Esta linea arranca solo la parte back
 CMD reflex run --env prod
 
