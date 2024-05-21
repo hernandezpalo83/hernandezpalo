@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN reflex init
 
 # Download all npm dependencies and compile frontend
-RUN reflex export --no-zip
+# RUN reflex export --no-zip
 
 # Esta linea arranca solo la parte back
 CMD reflex run --env prod
