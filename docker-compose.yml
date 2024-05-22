@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    container_name: mi-postgres
+    environment:
+      - POSTGRES_PASSWORD=6C7ittR!RCKajhD92D5V&v
+    ports:
+      - "5433:5432"
+    volumes:
+      - ~/postgres-data:/var/lib/postgresql/data
+
+  portafolio:
+    build:
+      context: .
+      dockerfile: Dockerfile_Local
+    container_name: mi-portafolio
+    ports:
+      - "3000:3000"
+      - "8000:8000"
+    depends_on:
+      - postgres
